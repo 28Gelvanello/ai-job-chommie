@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Fix Test - AI Job Chommie</title>
+    <style>
+        body {
+            background: #000;
+            color: #00ffff;
+            font-family: monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #000428 0%, #004e92 100%);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .loading-spinner {
+            width: 100px;
+            height: 100px;
+            border: 3px solid transparent;
+            border-top: 3px solid #00ffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 30px;
+        }
+        .loading-text {
+            font-size: 1.5rem;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .test-results {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+        .success { color: #00ff00; }
+        .error { color: #ff0000; }
+        .warning { color: #ffff00; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Loading Screen Fix Test</h1>
+    
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Testing Loading System...</div>
+    </div>
+    
+    <div class="test-results">
+        <h2>Test Results:</h2>
+        <div id="testLog"></div>
+        <button onclick="startTest()">🔄 Run Test Again</button>
+        <button onclick="forceComplete()">⚡ Force Complete</button>
+    </div>
+
+    <script>
+        // UNIFIED LOADING SYSTEM - EXACT COPY FROM MAIN FILE
+        let loadingCompleted = false;
+        let initializationAttempts = 0;
+        const MAX_INIT_ATTEMPTS = 3;
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'success' ? 'success' : type === 'error' ? 'error' : type === 'warning' ? 'warning' : '';
+            document.getElementById('testLog').innerHTML += `<div class="${color}">[${timestamp}] ${message}</div>`;
+            console.log(message);
+        }
+        
+        function completeLoading() {
+            if (loadingCompleted) {
+                log('⚠️ Loading already completed', 'warning');
+                return;
+            }
+            loadingCompleted = true;
+            
+            log('✅ Loading completed - removing loading screen', 'success');
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    log('🎉 Loading screen successfully removed!', 'success');
+                }, 500);
+            } else {
+                log('❌ Loading screen element not found', 'error');
+            }
+        }
+        
+        function safeInitialization() {
+            initializationAttempts++;
+            log(`🚀 Initialization attempt ${initializationAttempts}`);
+            
+            try {
+                // Simulate initialization tasks
+                setTimeout(() => log('📱 Cursor initialized'), 100);
+                setTimeout(() => log('🔐 Auth state checked'), 200);
+                setTimeout(() => log('🌐 Three.js initialized'), 300);
+                
+                // Show loading progress
+                showLoadingProgress();
+                
+                // Complete loading after 2 seconds
+                setTimeout(() => {
+                    log('⏰ 2 second timer reached - completing loading');
+                    completeLoading();
+                }, 2000);
+                
+            } catch (error) {
+                log(`❌ Initialization error: ${error.message}`, 'error');
+                if (initializationAttempts < MAX_INIT_ATTEMPTS) {
+                    setTimeout(safeInitialization, 1000);
+                } else {
+                    log('💀 Max initialization attempts reached - forcing completion', 'error');
+                    completeLoading();
+                }
+            }
+        }
+        
+        function showLoadingProgress() {
+            const loadingText = document.querySelector('.loading-text');
+            if (!loadingText) {
+                log('❌ Loading text element not found', 'error');
+                return;
+            }
+            
+            const loadingSteps = [
+                'Testing AI Systems...',
+                'Checking Database...',
+                'Loading Scrapers...',
+                'Systems Ready!'
+            ];
+            
+            let currentStep = 0;
+            const stepInterval = setInterval(() => {
+                if (currentStep < loadingSteps.length && !loadingCompleted) {
+                    loadingText.textContent = loadingSteps[currentStep];
+                    log(`📝 Loading step: ${loadingSteps[currentStep]}`);
+                    currentStep++;
+                } else {
+                    clearInterval(stepInterval);
+                    log('✅ Loading progress completed');
+                }
+            }, 400);
+        }
+        
+        // Test functions
+        function startTest() {
+            log('🧪 Starting loading screen test...', 'warning');
+            loadingCompleted = false;
+            initializationAttempts = 0;
+            
+            // Reset loading screen
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.display = 'flex';
+                loadingScreen.style.opacity = '1';
+            }
+            
+            // Start the test
+            safeInitialization();
+            
+            // Emergency fallback
+            setTimeout(() => {
+                if (!loadingCompleted) {
+                    log('⚠️ Emergency fallback activated - 5 seconds reached', 'warning');
+                    completeLoading();
+                }
+            }, 5000);
+        }
+        
+        function forceComplete() {
+            log('⚡ Force completion triggered', 'warning');
+            completeLoading();
+        }
+        
+        // Auto-start test when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🎯 Test page loaded - starting test in 1 second');
+            setTimeout(startTest, 1000);
+        });
+    </script>
+</body>
+</html>

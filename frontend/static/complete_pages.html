@@ -1,0 +1,599 @@
+<!-- ABOUT PAGE -->
+<div id="aboutPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">🤖 ABOUT AI JOB CHOMMIE</h1>
+                <p class="section-subtitle">
+                    The Future of AI-Powered Job Hunting
+                </p>
+
+                <div class="futuristic-card">
+                    <div class="about-logo">
+                        <img src="/logo.png" alt="AI Job Chommie Logo">
+                    </div>
+                    
+                    <h3 class="about-heading">
+                        🚀 OUR MISSION
+                    </h3>
+                    <p class="about-paragraph">
+                        AI Job Chommie revolutionizes job hunting through advanced artificial intelligence and machine learning. 
+                        We combine cutting-edge technology with human insight to create the most effective job search platform 
+                        in South Africa and beyond.
+                    </p>
+
+                    <h3 class="about-heading">
+                        ⚡ ADVANCED FEATURES
+                    </h3>
+                    <div class="grid grid-2">
+                        <div>
+                            <ul class="about-list">
+                                <li>🧠 Neural Network CV Analysis</li>
+                                <li>🎯 Intelligent Job Matching</li>
+                                <li>🤖 Automated Application System</li>
+                                <li>📊 Real-time Market Insights</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="about-list">
+                                <li>💡 AI-Generated Cover Letters</li>
+                                <li>🔍 Multi-Platform Job Scraping</li>
+                                <li>📈 Performance Analytics</li>
+                                <li>🛡️ Enterprise-Grade Security</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="about-heading" style="margin-top: 30px;">
+                        👥 OUR TEAM
+                    </h3>
+                    <p class="about-paragraph">
+                        Built by a team of AI specialists, software engineers, and career experts who understand 
+                        the challenges of modern job hunting. We're committed to democratizing access to 
+                        premium job search technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COMPANY DETAILS PAGE -->
+<div id="companyDetailsPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">🏢 COMPANY PROFILE</h1>
+                <div id="companyInfo" class="futuristic-card">
+                    <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                        Company Information
+                    </h3>
+                    <p style="color: #ccc;">Select a company from job listings to view detailed information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contactPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">📞 CONTACT US</h1>
+                <p class="section-subtitle">
+                    Get in touch with our AI support team
+                </p>
+
+                <div class="grid grid-2">
+                    <div class="futuristic-card">
+                        <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                            📧 SEND MESSAGE
+                        </h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-input" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" id="contactEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select class="form-input" id="contactSubject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="feature">Feature Request</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input" id="contactMessage" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="futuristic-btn primary">
+                                🚀 SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 class="about-heading">
+                            📍 CONTACT INFO
+                        </h3>
+                        <div class="contact-info-list">
+                            <p><strong>📧 Email:</strong> support@aijobchommie.co.za</p>
+                            <p><strong>📱 Phone:</strong> +27 123 456 7890</p>
+                            <p><strong>🏢 Address:</strong> Cape Town, South Africa</p>
+                            <p><strong>🕒 Hours:</strong> Mon-Fri 9AM-5PM SAST</p>
+                        </div>
+
+                        <h4 class="quick-support-heading">
+                            🚀 QUICK SUPPORT
+                        </h4>
+                        <button class="futuristic-btn" onclick="navigateToPage('help')">
+                            📚 Help Center
+                        </button>
+                        <button class="futuristic-btn" onclick="startLiveChat()">
+                            💬 Live Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FORGOT PASSWORD PAGE -->
+<div id="forgotPage" class="page">
+    <div class="auth-container">
+        <div class="futuristic-form">
+            <h2 class="text-center mb-3 forgot-password-heading">
+                🔐 RESET PASSWORD
+            </h2>
+            <form id="forgotForm">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" id="forgotEmail" required placeholder="your@email.com">
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="futuristic-btn primary">
+                        📧 SEND RESET LINK
+                    </button>
+                    <p class="mt-2">
+                        Remember your password? 
+                        <a onclick="navigateToPage('login')" class="forgot-password-link">Sign In</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- HELP PAGE -->
+<div id="helpPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">📚 HELP CENTER</h1>
+                <p class="section-subtitle">
+                    Get help with AI Job Chommie features
+                </p>
+
+                <div class="grid grid-2">
+                    <div class="futuristic-card">
+                        <h3 class="help-heading">
+                            🚀 GETTING STARTED
+                        </h3>
+                        <ul class="help-list">
+                            <li><a href="#">How to create your profile</a></li>
+                            <li><a href="#">Uploading your CV</a></li>
+                            <li><a href="#">Setting job preferences</a></li>
+                            <li><a href="#">Understanding AI matching</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 class="help-heading">
+                            🤖 AI FEATURES
+                        </h3>
+                        <ul class="help-list">
+                            <li><a href="#">How AI job matching works</a></li>
+                            <li><a href="#">Auto-apply feature guide</a></li>
+                            <li><a href="#">CV analysis explained</a></li>
+                            <li><a href="#">Cover letter generation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 class="help-heading">
+                            💳 BILLING & SUBSCRIPTIONS
+                        </h3>
+                        <ul class="help-list">
+                            <li><a href="#">Subscription plans</a></li>
+                            <li><a href="#">Payment methods</a></li>
+                            <li><a href="#">Canceling subscription</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 class="help-heading">
+                            🛠️ TROUBLESHOOTING
+                        </h3>
+                        <ul class="help-list">
+                            <li><a href="#">Login issues</a></li>
+                            <li><a href="#">Job search not working</a></li>
+                            <li><a href="#">Application tracking</a></li>
+                            <li><a href="#">Contact support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SETTINGS PAGE -->
+<div id="settingsPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">⚙️ SETTINGS</h1>
+                <p class="section-subtitle">
+                    Configure your AI Job Chommie experience
+                </p>
+
+                <div class="grid grid-2">
+                    <div class="futuristic-card">
+                        <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                            🤖 AI AUTOMATION
+                        </h3>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableAutoApply" checked> Enable Auto-Apply
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableAILetters" checked> AI Cover Letters
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableFollowUp"> Auto Follow-up
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Daily Application Limit</label>
+                            <select class="form-input" id="dailyLimit">
+                                <option value="5">5 applications</option>
+                                <option value="10" selected>10 applications</option>
+                                <option value="20">20 applications</option>
+                                <option value="unlimited">Unlimited (Premium)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                            🔔 NOTIFICATIONS
+                        </h3>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableBrowserNotifs" checked> Browser Notifications
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableJobMatches" checked> New Job Matches
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableStatusUpdates" checked> Application Status Updates
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="enableInterviewReminders" checked> Interview Reminders
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                            🔐 SECURITY
+                        </h3>
+                        <div class="form-group">
+                            <label class="form-label">Current Password</label>
+                            <input type="password" class="form-input" id="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="form-input" id="newPassword">
+                        </div>
+                        <button class="futuristic-btn" onclick="changePassword()">
+                            🔐 UPDATE PASSWORD
+                        </button>
+                        <div class="form-group mt-2">
+                            <label class="form-label">
+                                <input type="checkbox" id="enable2FA"> Enable Two-Factor Authentication
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="futuristic-card">
+                        <h3 style="color: #00ffff; font-family: 'Orbitron', monospace; margin-bottom: 20px;">
+                            📊 PRIVACY
+                        </h3>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" id="shareAnalytics" checked> Share Anonymous Analytics
+                            </label>
+                        </div>
+                        <button class="futuristic-btn" onclick="exportData()">
+                            📥 EXPORT MY DATA
+                        </button>
+                        <button class="futuristic-btn danger" onclick="deleteAccount()">
+                            🗑️ DELETE ACCOUNT
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button class="futuristic-btn success" onclick="saveSettings()">
+                        💾 SAVE ALL SETTINGS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SUBSCRIPTION PAGE -->
+<div id="subscriptionPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">💎 SUBSCRIPTION PLANS</h1>
+                <p class="section-subtitle">
+                    Unlock the full power of AI Job Chommie
+                </p>
+
+                <div class="grid grid-2">
+                    <div class="futuristic-card">
+                        <h3 class="plan-heading" style="color: #ffff00;">
+                            🆓 BASIC PLAN
+                        </h3>
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <span class="plan-price" style="color: #ffff00;">FREE</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Basic job search</li>
+                            <li>✅ 5 applications per day</li>
+                            <li>✅ Basic CV analysis</li>
+                            <li>✅ Email support</li>
+                            <li>❌ Auto-apply feature</li>
+                            <li>❌ Advanced AI matching</li>
+                            <li>❌ Unlimited applications</li>
+                        </ul>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button class="futuristic-btn" disabled>
+                                CURRENT PLAN
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="futuristic-card" style="border: 2px solid #00ffff;">
+                        <h3 class="plan-heading" style="color: #00ffff;">
+                            💎 PREMIUM PLAN
+                        </h3>
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <span class="plan-price" style="color: #00ffff;">R299</span>
+                            <span class="plan-currency">/month</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>✅ Everything in Basic</li>
+                            <li>✅ Unlimited applications</li>
+                            <li>✅ AI auto-apply feature</li>
+                            <li>✅ Advanced CV analysis</li>
+                            <li>✅ AI cover letter generation</li>
+                            <li>✅ Priority job matching</li>
+                            <li>✅ Priority support</li>
+                        </ul>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button class="futuristic-btn primary" onclick="selectPlan('premium', 299)">
+                                🚀 UPGRADE NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="futuristic-card mt-3">
+                    <h3 class="plan-heading" style="color: #00ffff;">
+                        📊 CURRENT SUBSCRIPTION
+                    </h3>
+                    <div class="current-subscription-grid">
+                        <div>
+                            <strong>Plan:</strong> <span id="currentSubscription">Basic</span>
+                        </div>
+                        <div>
+                            <strong>Status:</strong> <span style="color: #00ff00;">Active</span>
+                        </div>
+                        <div>
+                            <strong>Next Billing:</strong> <span id="nextBilling">N/A</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button class="futuristic-btn danger" id="cancelSubscriptionBtn" onclick="cancelSubscription()" style="display: none;">
+                            ❌ CANCEL SUBSCRIPTION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TERMS PAGE -->
+<div id="termsPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">📋 TERMS & CONDITIONS</h1>
+                <div class="futuristic-card">
+                    <h3 class="about-heading">
+                        Terms of Service
+                    </h3>
+                    <div class="terms-content">
+                        <p><strong>Last updated:</strong> January 2025</p>
+                        
+                        <h4>1. Acceptance of Terms</h4>
+                        <p>By accessing and using AI Job Chommie, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                        
+                        <h4>2. Use License</h4>
+                        <p>Permission is granted to temporarily use AI Job Chommie for personal, non-commercial transitory viewing only.</p>
+                        
+                        <h4>3. Disclaimer</h4>
+                        <p>The materials on AI Job Chommie are provided on an 'as is' basis. AI Job Chommie makes no warranties, expressed or implied.</p>
+                        
+                        <h4>4. Limitations</h4>
+                        <p>In no event shall AI Job Chommie or its suppliers be liable for any damages arising out of the use or inability to use the materials.</p>
+                        
+                        <h4>5. Privacy Policy</h4>
+                        <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PRIVACY PAGE -->
+<div id="privacyPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">🔒 PRIVACY POLICY</h1>
+                <div class="futuristic-card">
+                    <h3 class="about-heading">
+                        Privacy Policy
+                    </h3>
+                    <div class="privacy-content">
+                        <p><strong>Last updated:</strong> January 2025</p>
+                        
+                        <h4>Information We Collect</h4>
+                        <p>We collect information you provide directly to us, such as when you create an account, upload your CV, or contact us for support.</p>
+                        
+                        <h4>How We Use Your Information</h4>
+                        <p>We use the information we collect to provide, maintain, and improve our services, including AI job matching and application tracking.</p>
+                        
+                        <h4>Information Sharing</h4>
+                        <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+                        
+                        <h4>Data Security</h4>
+                        <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                        
+                        <h4>Contact Us</h4>
+                        <p>If you have any questions about this Privacy Policy, please contact us at privacy@aijobchommie.co.za</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WELCOME PAGE -->
+<div id="welcomePage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container">
+                <h1 class="section-title">🎉 WELCOME TO AI JOB CHOMMIE</h1>
+                <p class="section-subtitle">
+                    Your AI-powered job search journey begins now!
+                </p>
+
+                <div class="futuristic-card text-center">
+                    <div class="welcome-card-logo">
+                        <img src="/logo.png" alt="AI Job Chommie Logo">
+                    </div>
+                    
+                    <h3 class="welcome-heading">
+                        🚀 GET STARTED IN 3 STEPS
+                    </h3>
+                    
+                    <div class="grid grid-3">
+                        <div class="welcome-step">
+                            <div class="welcome-step-icon">📝</div>
+                            <h4>1. Complete Profile</h4>
+                            <p>Set up your job preferences and upload your CV</p>
+                        </div>
+                        <div class="welcome-step">
+                            <div class="welcome-step-icon">🤖</div>
+                            <h4>2. AI Analysis</h4>
+                            <p>Let our AI analyze your skills and match you with jobs</p>
+                        </div>
+                        <div class="welcome-step">
+                            <div class="welcome-step-icon">🎯</div>
+                            <h4>3. Start Applying</h4>
+                            <p>Apply to matched jobs automatically or manually</p>
+                        </div>
+                    </div>
+                    
+                    <div class="welcome-buttons">
+                        <button class="futuristic-btn primary" onclick="navigateToPage('profile')">
+                            🚀 COMPLETE MY PROFILE
+                        </button>
+                        <button class="futuristic-btn" onclick="navigateToPage('dashboard')">
+                            📊 GO TO DASHBOARD
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NOT FOUND PAGE -->
+<div id="notFoundPage" class="page">
+    <div class="main-content">
+        <div class="page-section">
+            <div class="container text-center">
+                <h1 class="glitch-text">404</h1>
+                <h2 class="not-found-heading">
+                    🤖 PAGE NOT FOUND
+                </h2>
+                <p class="not-found-message">
+                    The AI couldn't locate the requested page. It might have been moved or deleted.
+                </p>
+                <div>
+                    <button class="futuristic-btn primary" onclick="navigateToPage('home')">
+                        🏠 RETURN HOME
+                    </button>
+                    <button class="futuristic-btn" onclick="navigateToPage('jobs')">
+                        🔍 SEARCH JOBS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.welcome-step {
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-step h4 {
+    margin-bottom: 10px;
+}
+
+.welcome-step p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+</style>
+
