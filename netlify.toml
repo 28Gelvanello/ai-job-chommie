@@ -1,0 +1,24 @@
+# Netlify Configuration for AI Job Chommie PWA Frontend
+[build]
+  publish = "home/ubuntu/ai_job_chommie_app/frontend/static"
+  command = "echo 'Static site ready for deployment'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[context.production]
+  [context.production.environment]
+    REACT_APP_API_URL = "https://ai-job-chommie-backend.up.railway.app"
+    REACT_APP_DOMAIN = "aijobchommie.co.za"
+    REACT_APP_ENV = "production"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://ai-job-chommie-backend.up.railway.app/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
